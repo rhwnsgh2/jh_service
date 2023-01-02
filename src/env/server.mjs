@@ -11,8 +11,7 @@ const _serverEnv = serverSchema.safeParse(process.env);
 if (!_serverEnv.success) {
   console.error(
     "❌ Invalid environment variables:\n",
-    ...formatErrors(_serverEnv.error.format()),
-    process.env.NODE_ENV
+    ...formatErrors(_serverEnv.error.format())
   );
   throw new Error("Invalid environment variables");
 }

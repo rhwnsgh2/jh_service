@@ -2,7 +2,9 @@
   "name": "jh_service",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
+    "type": "module",
     "build": "next build",
     "dev": "next dev",
     "postinstall": "prisma generate",
@@ -10,6 +12,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@next-auth/prisma-adapter": "^1.0.5",
     "@prisma/client": "^4.5.0",
     "@tanstack/react-query": "^4.16.0",
@@ -20,8 +24,11 @@
     "antd": "^5.1.2",
     "next": "13.1.1",
     "next-auth": "^4.18.3",
+    "next-plugin-antd-less": "^1.8.0",
+    "next-transpile-modules": "^10.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sass": "^1.57.1",
     "superjson": "1.9.1",
     "zod": "^3.18.0"
   },

@@ -24,9 +24,22 @@ describe("<TodoForm />", () => {
   });
 
   describe("추가 버튼 handler", () => {
-    it("add TodoList when enter keyPress in input", () => {
+    beforeEach(() => {
+      todoListStub.length = 0;
+    });
+    it("add TodoList when {enter} keyPress in input", () => {
       cy.get("input")
         .type("test{enter}")
+        .then(() => {
+          expect(todoListStub).to.have.length(1);
+        });
+      cy.get("input").should("have.value", "");
+    });
+
+    it("add TodoList when click button", () => {
+      cy.get("input").type("test");
+      cy.get("button")
+        .click()
         .then(() => {
           expect(todoListStub).to.have.length(1);
         });

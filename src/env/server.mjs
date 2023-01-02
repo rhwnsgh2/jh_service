@@ -12,6 +12,7 @@ if (!_serverEnv.success) {
   console.error(
     "❌ Invalid environment variables:\n",
     ...formatErrors(_serverEnv.error.format()),
+    process.env.NODE_ENV
   );
   throw new Error("Invalid environment variables");
 }

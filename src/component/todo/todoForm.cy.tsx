@@ -17,4 +17,8 @@ describe("<TodoForm />", () => {
   it("renders input label", () => {
     cy.get("label").contains("Todo를 입력하세요.");
   });
+
+  it("renders input button", () => {
+    cy.get("button").contains("추가");
+  });
 });

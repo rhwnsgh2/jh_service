@@ -1,7 +1,7 @@
 import { Layout } from "antd";
 import React from "react";
 import { HeaderComponent } from "./headerComponent";
-import { TodoForm } from "./todo/todoForm";
+import TodoForm from "./todo/todoForm";
 
 export const HomeMain = () => {
   return (

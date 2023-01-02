@@ -6,8 +6,8 @@ export const WithCreateTodo = <P extends WithCreateTodoProps>(
   WrappedComponent: React.ComponentType<P>
 ) => {
   const createTodoComponent = ({ ...props }) => {
-    const createTodo = () => {
-      console.log("createTodo");
+    const createTodo = (value: string) => {
+      console.log("createTodo", value);
     };
 
     return <WrappedComponent {...(props as P)} createTodo={createTodo} />;

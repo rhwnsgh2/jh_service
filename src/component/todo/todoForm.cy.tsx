@@ -30,6 +30,7 @@ describe("<TodoForm />", () => {
         .then(() => {
           expect(todoListStub).to.have.length(1);
         });
+      cy.get("input").should("have.value", "");
     });
   });
 });

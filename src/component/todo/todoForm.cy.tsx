@@ -1,9 +1,10 @@
 import React from "react";
+import { createTodoStub, todoListStub } from "../../server/api/createTodoStub";
 import { TodoForm } from "./todoForm";
 
 describe("<TodoForm />", () => {
   beforeEach(() => {
-    cy.mount(<TodoForm />);
+    cy.mount(<TodoForm createTodo={createTodoStub} />);
   });
 
   it("renders TodoForm", () => {
@@ -20,5 +21,15 @@ describe("<TodoForm />", () => {
 
   it("renders input button", () => {
     cy.get("button").contains("추가");
+  });
+
+  describe("추가 버튼 handler", () => {
+    it("add TodoList when enter keyPress in input", () => {
+      cy.get("input")
+        .type("test{enter}")
+        .then(() => {
+          expect(todoListStub).to.have.length(1);
+        });
+    });
   });
 });

@@ -1,16 +1,12 @@
 import { Button, Form, Input } from "antd";
 import React from "react";
+import type { WithCreateTodoProps } from "../hoc/createTodo";
 import { WithCreateTodo } from "../hoc/createTodo";
 
-type TodoFormProps = {
-  createTodo: () => void;
-};
-
-export const TodoForm: React.FC<TodoFormProps> = ({
-  createTodo,
-}: TodoFormProps) => {
+export const TodoForm = ({ createTodo }: WithCreateTodoProps) => {
   const onFinish = ({ TodoInput }: { TodoInput: string }) => {
-    createTodo();
+    console.log("TEST");
+    createTodo(TodoInput);
   };
 
   return (

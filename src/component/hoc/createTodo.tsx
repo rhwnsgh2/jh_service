@@ -1,5 +1,5 @@
-type WithCreateTodoProps = {
-  createTodo: () => void;
+export type WithCreateTodoProps = {
+  createTodo: (value: string) => void;
 };
 
 export const WithCreateTodo = <P extends WithCreateTodoProps>(

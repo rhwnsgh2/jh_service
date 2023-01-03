@@ -10,7 +10,8 @@
     "postinstall": "prisma generate",
     "lint": "next lint",
     "start": "next start",
-    "test": "NODE_ENV=test cypress open"
+    "test": "NODE_ENV=test cypress open",
+    "prisma:migrate": "dotenv -e .env.development -- npx prisma migrate dev --name postgres-init"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",

@@ -1,13 +1,15 @@
 import { Layout } from "antd";
 import React from "react";
+import { ContentComponent } from "./contentComponent";
 import { HeaderComponent } from "./headerComponent";
-import TodoForm from "./todo/todoForm";
 
 export const HomeMain = () => {
   return (
     <Layout>
       <HeaderComponent name={"나는헤더 히힣"} />
-      <TodoForm />
+      <Layout>
+        <ContentComponent></ContentComponent>
+      </Layout>
     </Layout>
   );
 };

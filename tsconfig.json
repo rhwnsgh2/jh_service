@@ -14,8 +14,19 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "noUncheckedIndexedAccess": true
+    "noUncheckedIndexedAccess": true,
+    "types": ["jest", "node", "@types/testing-library__jest-dom"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs", "next.config.js"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.cjs",
+    "**/*.mjs",
+    "next.config.js"
+  ],
+  "exclude": ["node_modules", "./cypress.config.ts", "**/*.test.ts"],
+  "typeAcquisition": {
+    "include": ["jest"]
+  }
 }

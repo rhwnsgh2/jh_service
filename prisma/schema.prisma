@@ -21,9 +21,10 @@ model Example {
 }
 
 model Todo {
-  id      String  @id @default(cuid())
+  id      String   @id @default(cuid())
+  date    DateTime @default(now())
   content String
-  isDone  Boolean @default(false)
+  isDone  Boolean  @default(false)
 }
 
 // // Necessary for Next auth

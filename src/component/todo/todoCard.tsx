@@ -1,5 +1,6 @@
 import { Card } from "antd";
-import type { Todo } from "@prisma/client";
+import { Todo } from "../../domain/model/todo";
+import { convertToYYMMDD } from "../../utils/date";
 
 type TodoCardProps = {
   todo: Todo;
@@ -7,8 +8,8 @@ type TodoCardProps = {
 
 export const TodoCard = ({ todo }: TodoCardProps) => {
   return (
-    <Card title={todo.date.toLocaleString} style={{ flex: 1 }}>
-      test
+    <Card title={convertToYYMMDD(todo.date)} style={{ flex: 1 }}>
+      {todo.content}
     </Card>
   );
 };

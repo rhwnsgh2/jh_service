@@ -15,6 +15,7 @@
     "prisma:migrate": "dotenv -e .env.development -- npx prisma migrate dev --name postgres-init"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.8.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@next-auth/prisma-adapter": "^1.0.5",

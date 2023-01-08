@@ -6,7 +6,7 @@ describe("<TodoCard />", () => {
     cy.mount(
       <TodoCard
         todo={{
-          id: "test",
+          id: "todoCard",
           date: new Date("2023-01-01"),
           content: "content",
           isDone: true,
@@ -16,11 +16,15 @@ describe("<TodoCard />", () => {
     );
   });
 
-  it("renders TodoCard date", () => {
-    cy.get("div").contains("2023-01-01");
-  });
-
   it("renders TodoCard content", () => {
     cy.get("div").contains("content");
+  });
+
+  it("renders TodoCard Done Button", () => {
+    cy.get("button")
+      .click()
+      .then(() => {
+        cy.get("#todoCard").should("not.exist");
+      });
   });
 });

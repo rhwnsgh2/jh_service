@@ -1,15 +1,15 @@
-import { Card } from "antd";
+import { CheckOutlined } from "@ant-design/icons";
+import { Button, Card } from "antd";
 import { Todo } from "../../domain/model/todo";
-import { convertToYYMMDD } from "../../utils/date";
-
 type TodoCardProps = {
   todo: Todo;
 };
 
 export const TodoCard = ({ todo }: TodoCardProps) => {
   return (
-    <Card title={convertToYYMMDD(todo.date)} style={{ flex: 1 }}>
+    <Card id={todo.id} style={{ flex: 1 }}>
       {todo.content}
+      <Button icon={<CheckOutlined />}></Button>
     </Card>
   );
 };

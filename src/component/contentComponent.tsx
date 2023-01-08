@@ -5,7 +5,15 @@ import TodoCard from "./todo/todoCard";
 export const ContentComponent = () => {
   return (
     <StyledContent>
-      <TodoCard></TodoCard>
+      <TodoCard
+        todo={{
+          id: "test",
+          date: new Date("2023-01-01"),
+          content: "content",
+          isDone: true,
+          type: "once",
+        }}
+      ></TodoCard>
     </StyledContent>
   );
 };

@@ -3,18 +3,14 @@ import { Button, Card } from "antd";
 import { Todo } from "../../domain/model/todo";
 type TodoCardProps = {
   todo: Todo;
-  onButtonClick: () => void;
 };
 
-export const TodoCard = ({ todo, onButtonClick }: TodoCardProps) => {
+export const TodoCard = ({ todo }: TodoCardProps) => {
   const isDone = todo.isDone;
   return (
     <Card id={todo.id} style={{ flex: 1 }}>
       {todo.content}
-      <Button
-        onClick={onButtonClick}
-        icon={isDone ? <CloseOutlined /> : <CheckOutlined />}
-      />
+      <Button icon={isDone ? <CloseOutlined /> : <CheckOutlined />} />
     </Card>
   );
 };

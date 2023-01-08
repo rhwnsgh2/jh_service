@@ -13,7 +13,6 @@ describe("<TodoCard />", () => {
             isDone: false,
             type: "once",
           }}
-          onButtonClick={() => {}}
         />
       );
     });
@@ -37,7 +36,6 @@ describe("<TodoCard />", () => {
             isDone: true,
             type: "once",
           }}
-          onButtonClick={() => {}}
         />
       );
     });

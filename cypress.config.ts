@@ -6,5 +6,8 @@ export default defineConfig({
       framework: "next",
       bundler: "webpack",
     },
+    video: false,
+    screenshotOnRunFailure: false,
+    watchForFileChanges: true,
   },
 });

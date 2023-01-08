@@ -1,5 +1,5 @@
 import React from "react";
-import { createTodoStub, todoListStub } from "../../server/api/createTodoStub";
+import { createTodoStub, todoListStub } from "../../server/api/todoStub";
 import { TodoForm } from "./todoForm";
 
 describe("<TodoForm />", () => {

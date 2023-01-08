@@ -1,5 +1,5 @@
 import React from "react";
-import TodoCard from "./todoCard";
+import TodoCard from ".";
 
 describe("<TodoCard />", () => {
   describe("status not done", () => {
@@ -22,6 +22,10 @@ describe("<TodoCard />", () => {
 
     it("renders TodoCard Done Button visible", () => {
       cy.get(".anticon-check").should("be.visible");
+    });
+
+    it("renders TodoCard Edit Button visible", () => {
+      cy.get(".anticon-edit").should("be.visible");
     });
   });
 

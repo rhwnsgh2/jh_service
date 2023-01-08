@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Layout } from "antd";
 import TodoCard from "./todo/todoCard";
+import TodoForm from "./todo/todoForm";
 
 export const ContentComponent = () => {
   return (
@@ -13,7 +14,8 @@ export const ContentComponent = () => {
           isDone: true,
           type: "once",
         }}
-      ></TodoCard>
+      />
+      <TodoForm />
     </StyledContent>
   );
 };

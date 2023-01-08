@@ -1,3 +1,4 @@
 {
-  "editor.gotoLocation.multipleDefinitions": "goto"
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "cSpell.words": ["antd"]
 }

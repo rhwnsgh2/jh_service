@@ -10,7 +10,7 @@
     "postinstall": "prisma generate",
     "lint": "next lint",
     "start": "next start",
-    "cypress": "NODE_ENV=test cypress run --component",
+    "cypress": "NODE_ENV=test cypress open",
     "test": "jest",
     "prisma:migrate": "dotenv -e .env.development -- npx prisma migrate dev --name postgres-init"
   },

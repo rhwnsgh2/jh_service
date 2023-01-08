@@ -1,15 +1,20 @@
-import { CheckOutlined } from "@ant-design/icons";
+import { CheckOutlined, CloseOutlined } from "@ant-design/icons";
 import { Button, Card } from "antd";
 import { Todo } from "../../domain/model/todo";
 type TodoCardProps = {
   todo: Todo;
+  onButtonClick: () => void;
 };
 
-export const TodoCard = ({ todo }: TodoCardProps) => {
+export const TodoCard = ({ todo, onButtonClick }: TodoCardProps) => {
+  const isDone = todo.isDone;
   return (
     <Card id={todo.id} style={{ flex: 1 }}>
       {todo.content}
-      <Button icon={<CheckOutlined />}></Button>
+      <Button
+        onClick={onButtonClick}
+        icon={isDone ? <CloseOutlined /> : <CheckOutlined />}
+      />
     </Card>
   );
 };
